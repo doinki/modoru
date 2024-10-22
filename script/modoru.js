@@ -6,6 +6,7 @@
 
   Object.defineProperty(window.history, 'pushState', {
     configurable: true,
+    writable: true,
     value(data, unused, url) {
       data[key] = ((window.history.state || {})[key] || 0) + 1;
 
