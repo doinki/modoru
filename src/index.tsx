@@ -8,7 +8,7 @@ export const ModoruScript = forwardRef<
     <script
       dangerouslySetInnerHTML={{
         __html:
-          '!function(){let t=window.history.pushState.bind(window.history),i="MODORU_INDEX";Object.defineProperty(window.history,"pushState",{configurable:!0,value:(o,e,n)=>(o[i]=((window.history.state||{})[i]||0)+1,t(o,e,n))})}();',
+          '!function(){let t=window.history.pushState.bind(window.history),i="MODORU_INDEX";Object.defineProperty(window.history,"pushState",{configurable:!0,writable:!0,value:(e,o,n)=>(e[i]=((window.history.state||{})[i]||0)+1,t(e,o,n))})}();',
       }}
       ref={ref}
       {...props}
