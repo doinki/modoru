@@ -8,7 +8,7 @@ export const ModoruScript = forwardRef<
     <script
       dangerouslySetInnerHTML={{
         __html:
-          '!function(){let t=window.history.pushState.bind(window.history),i="MODORU_INDEX";Object.defineProperty(window.history,"pushState",{configurable:!0,writable:!0,value:(e,o,n)=>(e[i]=((window.history.state||{})[i]||0)+1,t(e,o,n))})}();',
+          '!function(){let t=window.history.pushState,e="__MODORU";Object.defineProperty(window.history,"pushState",{configurable:!0,writable:!0,value(i,o,n){return"object"==typeof i&&null!==i&&(i[e]=((window.history.state||{})[e]||0)+1),t.call(this,i,o,n)}})}();',
       }}
       ref={ref}
       {...props}
@@ -18,5 +18,12 @@ export const ModoruScript = forwardRef<
 ModoruScript.displayName = 'ModoruScript';
 
 export function isModoruRoot(): boolean {
-  return !window.history.state.MODORU_INDEX;
+  if (
+    typeof window.history.state === 'object' &&
+    window.history.state !== null
+  ) {
+    return !window.history.state.__MODORU;
+  }
+
+  return true;
 }

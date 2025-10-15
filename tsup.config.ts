@@ -7,8 +7,12 @@ export default defineConfig({
   env: {
     NODE_ENV: 'production',
   },
+  esbuildOptions(options) {
+    options.sourcemap = true;
+  },
   format: ['cjs', 'esm'],
-  sourcemap: true,
+  minifyIdentifiers: true,
+  minifyWhitespace: true,
   target: 'es2018',
   treeshake: true,
 });
