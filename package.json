@@ -1,7 +1,7 @@
 {
   "name": "modoru",
   "license": "MIT",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "packageManager": "pnpm@10.18.3",
   "sideEffects": false,
   "type": "module",
