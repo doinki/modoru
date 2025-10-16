@@ -1,6 +1,8 @@
 /* eslint-disable */
 
 (function () {
+  'use strict';
+
   let originalPushState = window.history.pushState;
   let originalReplaceState = window.history.replaceState;
   let key = '__MODORU';
