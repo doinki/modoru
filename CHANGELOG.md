@@ -1,5 +1,14 @@
 # modoru
 
+## 0.2.0
+
+### Minor Changes
+
+- de17e55: feat: add support for history.replaceState
+
+  Extend history API interception to include replaceState method,
+  ensuring the \_\_MODORU key is preserved when replacing history state.
+
 ## 0.1.0
 
 ### Minor Changes
