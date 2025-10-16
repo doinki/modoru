@@ -1,5 +1,13 @@
 # modoru
 
+## 0.2.1
+
+### Patch Changes
+
+- 5c5acd5: chore(script): add strict mode directive to modoru.js
+
+  Enable strict mode to enforce stricter parsing and error handling
+
 ## 0.2.0
 
 ### Minor Changes
